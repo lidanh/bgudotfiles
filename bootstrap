@@ -126,5 +126,3 @@ install_dotfiles
 
 echo ''
 echo '  All installed!'
-
-script ~/.tcshrc
