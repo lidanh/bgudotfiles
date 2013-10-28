@@ -1,1 +1,6 @@
 alias	ls	'ls --color=always'
+
+####### GIT ALIASES #######
+alias	gp	'git push origin HEAD'
+alias	gca	'git commit -am'
+alias	gs	'git status'
