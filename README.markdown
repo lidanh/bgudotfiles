@@ -17,7 +17,7 @@ Run this:
 ```sh
 git clone https://github.com/lidanh/bgudotfiles.git ~/.dotfiles
 cd ~/.dotfiles
-script/bootstrap
+bootstrap
 ```
 
 This will symlink the appropriate files in `.dotfiles` to your home directory.
