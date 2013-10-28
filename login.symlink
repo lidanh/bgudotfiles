@@ -7,9 +7,9 @@ mesg y
 
 clear
 
-setenv TERM_INGRES "xterm-256color"
-setenv TERM "xterm-256color"
-set term = "xterm-256color"
+setenv TERM_INGRES "screen-256color"
+setenv TERM "screen-256color"
+set term = "screen-256color"
 
 echo "+++++++++++++++++++++++++++++++++++"
 if (-e /tmp/$USER) then
