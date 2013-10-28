@@ -1,0 +1,3 @@
+#!/bin/sh
+
+ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no lidanh@cs004row4-3

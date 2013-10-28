@@ -1,0 +1,2 @@
+ln -s ~/.dotfiles/.tcshrc ~/.tcshrc
+ln -s ~/.dotfiles/connect.sh ~/connect.sh
