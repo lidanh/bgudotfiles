@@ -1,14 +1,14 @@
 # Ben Gurion University dotfiles
 
-## dotfiles
+![BGU dotfiles](https://i.imgur.com/90Gg7.png)
 
-Your dotfiles are how you personalize your system. These are mine.
+## what's inside
 
-I was a little tired of having long alias files and everything strewn about
-(which is extremely common on other dotfiles projects, too). That led to this
-project being much more topic-centric. I realized I could split a lot of things
-up into the main areas I used (Ruby, git, system libraries, and so on), so I
-structured the project accordingly.
+- Colors!! colorful shell with orange prompt for BGU.
+- [spf13-vim](http://vim.spf13.com/)- the best vim distribution with a lot of useful plugins.
+- git plugins (e.g. git-wtf)
+- common aliases for fast development
+- Unicode support
 
 ## install
 
@@ -22,3 +22,10 @@ cd ~/.dotfiles
 
 This will symlink the appropriate files in `.dotfiles` to your home directory.
 Everything is configured and tweaked within `~/.dotfiles`.
+
+![BGU dotfiles](https://i.imgur.com/c0GGP.png)
+
+## Best Practices
+
+Generate ssh public keys for your own machine and BGU gateway. Add them to .ssh/authorized_keys so you can perform
+ssh and scp without typing the password again and again.  more info [here](http://www.thegeekstuff.com/2008/06/perform-ssh-and-scp-without-entering-password-on-openssh/).
