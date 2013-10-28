@@ -27,7 +27,7 @@ fail () {
 }
 
 setup_gitconfig () {
-  if ! [ -f git/gitconfig.symlink ]
+  if ! [ -f git/gitconfig.symlink ] && ! [ -f ~/.gitconfig ]
   then
     info 'setup gitconfig'
 
@@ -117,12 +117,31 @@ install_dotfiles () {
       link_files $source $dest
     fi
 
-  done
+done
 
+}
+
+install_spf13vim() {
+  info 'Installing spf13 for a better vim'
+
+  if ! [ -f ~/.spf13-vim-3/bootstrap.sh ]
+  then
+      while true; do
+          read -p "Would you like to install spf13, the ultimate vim distribution?" yn
+          case $yn in
+              [Yy]* )
+                      curl https://j.mp/spf13-vim3 -L > spf13-vim.sh && sh spf13-vim.sh; break;;
+              [Nn]* ) break;;
+              * ) break;;
+          esac
+      done
+  fi
+  success "spf13 distribution installed successfuly. enjoy your vim!"
 }
 
 setup_gitconfig
 install_dotfiles
+install_spf13vim
 
 echo ''
 echo '  All installed!'
