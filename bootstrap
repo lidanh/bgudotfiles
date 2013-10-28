@@ -131,7 +131,7 @@ install_spf13vim() {
 	  read -n 1 yn  
           case $yn in
               [Yy]* )
-                      curl https://j.mp/spf13-vim3 -L > ~/.spf13-vim.sh && sh ~/.spf13-vim.sh;  success "spf13 distribution installed successfuly. enjoy your vim!";;
+                      curl https://j.mp/spf13-vim3 -L > ~/.spf13-vim.sh && sh ~/.spf13-vim.sh;  success "spf13 distribution installed successfuly. enjoy your vim!"; break;;
               * ) break;;
           esac
       done
