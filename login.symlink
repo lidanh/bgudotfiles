@@ -10,6 +10,10 @@ clear
 setenv TERM_INGRES "screen-256color"
 setenv TERM "screen-256color"
 set term = "screen-256color"
+setenv LANG "en_US.UTF-8"
+set LANG = "en_US.UTF-8"
+setenv LC_ALL "en_US.UTF-8"
+set LC_ALL = "en_US.UTF-8"
 
 echo "+++++++++++++++++++++++++++++++++++"
 if (-e /tmp/$USER) then
