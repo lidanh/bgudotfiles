@@ -1,0 +1,72 @@
+#!/usr/local/bin/tcsh -f
+
+alias a alias
+   
+set station  =  `uname`
+switch ($station)
+        case IRIX* :
+                a  pss   'ps -eaf|g $USER'
+                a  doom  'cd /usr/local/sgidoom'
+                a  doomn 'cd /usr/local/sgidoom;sgixdoom -deathmatch -nomonsters -turbo 250 -net \!*'
+                a  paper 'rsh steel "cd ~admin/LP;user_data $USER"'
+                a  quota 'rsh steel "quota -v"'
+                a  top   'top -i 1'
+                a  sound 'cd /usr/sounds;soundfiler&;apanel&'
+        breaksw
+        case AIX* :
+                a  start '/bin/rm -f ~/.config/display; source ~/.login'
+                a  pss   'ps -eaf|g $USER'
+                a  psa   'ps -aef'
+        breaksw
+        default:
+                a  pss   'ps -aux |g $USER'
+                a  paper 'pushd ~admin/LP > /dev/null;user_data $USER;popd > /dev/null'
+                a  top   'top -s 1'
+        breaksw
+endsw
+
+a -        'cd -'
+a ..       'cd ..'
+a DU       'du -s * | sort -n'
+a al       'source ~/.config/aliases'
+a calc     'echo "\!*"|bc'
+a cd..     'cd ..'
+a cdd      'pushd \!*' 
+a cdl      'cd \!* ; l' 
+a com      'source ~/.config/complete'
+a cp       '/bin/cp'
+a def      'xrdb -load ~/.config/Xdefaults'
+a del      '/bin/rm -rf'
+a deld     '/bin/rm -rf'
+a dis      'echo $DISPLAY'
+a dtf      'echo $DISPLAY > ~/.config/display'
+a f        'finger'
+a fdis     'cat ~/.config/display'
+a ftd      'setenv DISPLAY `cat ~/.config/display`;echo;echo "Display is set to "$DISPLAY' 
+a g        'grep \!*'
+a h        'history'
+a inz      'source ~/.tcshrc'
+a j        'jobs'
+a k9       'kill -9'
+a l        '/bin/ls -lF \!*'
+a ll       '/bin/ls -alF \!*'
+a ls       '/bin/ls -F'
+a m        'make'
+a md       'mkdir'
+a mv       '/bin/mv'
+a pd       'popd \!*'
+a quota    'quota -v'
+a reh      'rehash'
+a rm       '/bin/rm -i'
+a rmd      '/bin/rm -f ~/.config/display'
+a sd       'setenv DISPLAY \!*":0.0"'
+a setiname 'echo ""'
+a setname  'echo ""'
+a setwname 'echo ""'
+a t        'telnet'
+a up       'uptime'
+a w        'w \!* |sort|more'
+a who      'who \!* |sort|more'
+a x        'latex'  
+a xd       'xdvi'
+

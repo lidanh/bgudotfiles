@@ -44,10 +44,11 @@ alias pine     '/usr/local/bin/pine -p $HOME/.config/pinerc \!*; deld ~/.pine-de
 ##########################################
 
 ############### LOAD CONF ################
-source ${HOME_CONF}/tcsh/aliases
+# source ${HOME_CONF}/tcsh/aliases
 source ${HOME_CONF}/tcsh/complete
 source ${HOME_CONF}/tcsh/javarc
 source ${HOME_CONF}/tcsh/bindkeys
+source ${DOTFILES}/bgu_base_aliases
 source ${DOTFILES}/aliases
 ##########################################
 
