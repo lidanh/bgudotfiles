@@ -138,8 +138,8 @@ install_spf13vim() {
   fi
 }
 
-# setup_gitconfig
-# install_dotfiles
+setup_gitconfig
+install_dotfiles
 install_spf13vim
 
 echo ''
