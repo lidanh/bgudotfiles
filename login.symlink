@@ -1,0 +1,40 @@
+###################################################
+#      SOME SETTINGS FOR THE SYSTEM ENVIRONMENT   #
+###################################################
+stty quit  
+stty erase  
+mesg y
+
+clear
+
+setenv TERM_INGRES "xterm-256color"
+setenv TERM "xterm-256color"
+set term = "xterm-256color"
+
+echo "+++++++++++++++++++++++++++++++++++"
+if (-e /tmp/$USER) then
+  echo "+ /tmp/$USER    : EXIST."
+else
+  mkdir -p /tmp/$USER
+  chmod 700 /tmp/$USER
+  echo "+ /tmp/$USER    : CREATED."
+endif
+
+if ("$?REMOTEHOST" != 0) then 
+        setenv DISPLAY $REMOTEHOST":0.0"
+        echo -n "+ DISPLAY IS SET TO       : "
+        echo -n ""
+        echo "$DISPLAY"
+        echo -n ""
+else
+        echo "+ DISPLAY NOT SET"
+endif
+
+echo -n "+ Permission is           : "
+echo -n "[1m"
+ls -ld $HOME | awk '{print $1}'
+echo -n "[0m"
+echo "+--------------------------------------"
+echo "+              .rhosts :"
+awk '{printf "+   %s\n",$0}' ~/.rhosts
+echo "+++++++++++++++++++++++++++++++++++++++"
