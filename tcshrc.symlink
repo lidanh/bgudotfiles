@@ -68,3 +68,5 @@ setenv PATH ${PATH}:.:/usr/ucb:/usr/bin:~/bin:/bin:/usr/local/bin:/usr/bin/X11:/
 setenv PATH ${PATH}:/usr/openwin/bin:/usr/local/GNU/bin:/usr/ccs/bin:/usr/bin
 setenv PATH ${PATH}:${DOTFILES}/bin
 if (`/bin/uname` == "Linux") setenv PATH /opt/kde3/bin:${PATH}
+
+tmux attach -t base || tmux new -s base
