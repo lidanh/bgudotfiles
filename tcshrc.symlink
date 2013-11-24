@@ -69,4 +69,8 @@ setenv PATH ${PATH}:/usr/openwin/bin:/usr/local/GNU/bin:/usr/ccs/bin:/usr/bin
 setenv PATH ${PATH}:${DOTFILES}/bin
 if (`/bin/uname` == "Linux") setenv PATH /opt/kde3/bin:${PATH}
 
+set autolist
+set correct=cmd
+set complete=enhance
+
 tmux attach -t base || tmux new -s base
