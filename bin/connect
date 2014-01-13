@@ -1,2 +1,2 @@
 #!/bin/sh
-ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no lidanh@${1:-cs003row1-1}
+ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no ${1:-lidanh}@${2:-cs003row1-1}
